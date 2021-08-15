@@ -1,0 +1,26 @@
+name: zardella_assignment
+description: A Flutter coding assignment for Zardella by Marybeth Flonia Sato.
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  cupertino_icons: ^1.0.0
+  flutter:
+    sdk: flutter
+  get: ^3.24.0
+  grouped_list: ^4.1.0
+  intl:
+  numeric_keyboard: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
