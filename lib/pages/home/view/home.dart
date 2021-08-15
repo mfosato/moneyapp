@@ -122,14 +122,7 @@ class HomeScreen extends StatelessWidget {
                 child: Container(
               child: Obx(
                 () => GroupedListView(
-                  elements: homeController.transactionData
-                      .where((transc) =>
-                          generalFormat.format(transc.dateTime) ==
-                              generalFormat.format(DateTime.now()) ||
-                          generalFormat.format(transc.dateTime) ==
-                              generalFormat.format(DateTime.now()
-                                  .subtract(const Duration(days: 1))))
-                      .toList(),
+                  elements: homeController.transactionData.toList(),
                   groupBy: (TransactionModel transc) =>
                       generalFormat.format(transc.dateTime),
                   groupComparator: (value1, value2) =>
@@ -152,7 +145,7 @@ class HomeScreen extends StatelessWidget {
                                       .subtract(const Duration(days: 1))) ==
                                   datetime
                               ? 'YESTERDAY'
-                              : DateFormat.yMMMMd()
+                              : DateFormat('d MMMM')
                                   .format(DateTime.parse(datetime))
                                   .toUpperCase(),
                       textAlign: TextAlign.start,
